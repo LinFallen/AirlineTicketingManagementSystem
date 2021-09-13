@@ -6,4 +6,5 @@
 2. 创建数据库，数据铺底，sql 文件在 db 目录下
 3. 在 eclipse 或 idea 中打开项目，配置 tomcat
 4. 启动 tomca t，访问主页 http://localhost:8080/proj/index.jsp ，登录密码请看数据库
-5. 项目汇报模板
+5. 项目汇报模板与报告，在 [doc 目录 ](https://github.com/LinFallen/AirlineTicketingManagementSystem/tree/main/doc)中
+
