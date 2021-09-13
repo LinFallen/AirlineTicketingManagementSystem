@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="cn.jmu.mapper.OrderListMapper">
+
+	<resultMap id="OrderList" type="cn.jmu.po.OrderList">
+		<result column="mm" property="orderID"></result>
+	</resultMap>
+ 	<insert id="addOrder"  parameterType="cn.jmu.po.OrderList">
+ 		insert into OrderList(account,orderID,orderTime) values(#{account},#{orderID},#{orderTime})
+ 	</insert>
+ 	<select id="getLatestOrderID"  resultType="int" parameterType="String">
+		select IFNULL(max(orderID),0) from orderlist where account = #{account}
+
+ 	</select>
+ </mapper>
